@@ -1,0 +1,363 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+#page {
+  width: 960px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+header {
+  height: 350px;
+  padding: 0px 20px;
+  background: linear-gradient(rgba(70,130,180,0.7),
+  rgba(70,130,180,0.7)), url("../images/beachwavesHeader.jpg");
+  background-size: cover;
+  vertical-align: middle;
+  text-align: center;
+  font-family: 'PT Sans', sans-serif;
+}
+
+
+header nav {
+  padding:20px;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.leftnav {
+  display: inline;
+  color: black;
+}
+
+header nav ul {
+float: right;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.headline h1 {
+  font-size: 60px;
+  text-align: center;
+  color: white;
+  padding-top: 40px;
+  margin-bottom: 0px;
+
+}
+
+.headline h5 {
+  font-size: 6px;
+  text-align: center;
+  margin-top: 0px;
+}
+
+
+/*   END HEADER   */
+
+#content {
+overflow: auto;
+margin: 0;
+padding: 0;
+}
+
+
+
+article {
+  width: 585px;
+  float: left;
+  margin: 0px 5px 0px 30px;
+  color: #5d6a71;
+  font-family:'PT Sans', sans-serif;
+  font-size: 14px;
+/*   padding: 0px 5px 0px 30px; */
+}
+
+article h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 48px;
+  margin-bottom: 1px;
+  color: black;
+}
+
+
+.NameDate {
+  font-size: 10px;
+  color: #ABB5C1;
+  margin-top: 2px;
+}
+
+.NameDate .CircleImage {
+  width: 4%;
+}
+
+img.CircleImage {
+  border-radius: 100%;
+  width: 17%;
+}
+
+article blockquote {
+  font-family: 'Open Sans', sans-serif;
+  color: #406DAF;
+  font-size: 22px;
+}
+
+.buttons {
+  margin-left: 0;
+  padding-left: 0;
+  font-family:'PT Sans', sans-serif;
+}
+
+.buttons li {
+  display: inline;
+  margin-right: 5px;
+  width: 80px;
+  height: 50px;
+}
+
+li#Comments, li#ReadLater {
+  background-color: #a6b1bd;
+}
+
+li#Share {
+  background-color: #406caf;
+}
+
+
+.buttons a {
+  color: white;
+  font-size: 12px;
+}
+
+#Comments, #ReadLater, #Share {
+  padding: 5px 5px 5px 0px;
+  display: inline;
+  position: relative;
+}
+
+#Comments img, #Comments span {
+  vertical-align: middle;
+}
+
+
+#ReadLater img, #ReadLater span {
+  vertical-align: middle;
+}
+
+#Share img, #Share span {
+  vertical-align: middle;
+}
+
+/*   END MAIN SECTION, LEFT COLUMN  */
+
+
+.asideWrapper {
+  width: 285px;
+  float: left;
+  margin: 50px 10px 0px 30px;
+  color:#ABB5C1;
+}
+
+.userInfo {
+  width: 285px;
+}
+.CircleImage2 {
+  border-radius: 100%;
+  width: 25%;
+  position: relative;
+  margin: 10px 20px 0px 100px;
+}
+
+.AnneMarieName {
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.userInfo ul li {
+  display: inline;
+  list-style-type: none;
+  text-decoration: none;
+  font-size: 10px;
+  margin-top: 0px;
+}
+
+
+img.SUPImage {
+  display: block;
+  text-align: center;
+
+}
+
+.AboutAd {
+  text-align: right;
+  margin-right: 40px;
+  font-size: 5px;
+}
+
+#heading {
+  color:#406DAF;
+  margin-top: 0px;
+  margin-bottom: 0;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+}
+.SidebarSection {
+  font-size: 6px;
+  font-family:'PT Sans', sans-serif;
+}
+
+
+
+/*    END MAIN SECTION, RIGHT COLUMN   */
+
+#Posthead {
+  width: 960px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 40px;
+  background-color: white;
+  text-align: center;
+}
+
+.PopularPosts {
+  position: relative;
+  display: block;
+}
+
+.PopularPosts a {
+  display: inline;
+}
+
+.PopularPosts p {
+margin-top: 200px;
+margin-left: 10px;
+font-family: 'Oswald', sans-serif;
+font-size: 20px;
+
+}
+
+.LongerPost p {
+  margin-top: 170px;
+}
+
+.CoolPost, .PostTitle, .LongerPost, .CoolaPost {
+  width: 240px;
+  height: 240px;
+  float: left;
+  display: inline;
+}
+
+
+.CoolPost {
+  background: linear-gradient(
+    rgba(70,130,180,0.7),
+    rgba(70,130,180,0.7)),
+  url("../images/KellySlater240240.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.CoolPost:hover {
+  background: none;
+  background-image: url("../images/KellySlater240240.jpg");
+}
+
+.PostTitle {
+
+  background: linear-gradient(
+    rgba(70,130,180,0.7),
+    rgba(70,130,180,0.7)),
+    url("../images/Beer240240.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.PostTitle:hover {
+  background: none;
+  background-image: url("../images/Beer240240.jpg");
+}
+
+.LongerPost {
+  background: linear-gradient(
+    rgba(70,130,180,0.7),
+    rgba(70,130,180,0.7)),
+    url("../images/Zach240240.jpg");
+}
+
+.LongerPost:hover {
+  background: none;
+  background-image: url("../images/Zach240240.jpg");
+}
+
+.CoolaPost {
+
+  background: linear-gradient(
+  rgba(70,130,180,0.7),
+  rgba(70,130,180,0.7)),
+  url("../images/LiquorBottles240240.jpg");
+}
+
+.CoolaPost:hover {
+  background: none;
+  background-image: url("../images/LiquorBottles240240.jpg");
+}
+
+
+/*   END POPULAR POSTS SECTION   */
+
+.footer-wrapper {
+  width: 960px;
+  background-color: #213752;
+  height: 55px;
+  color: #ABB5C1;
+  display: inline-block;
+  font-size: 9px;
+}
+
+.footer-wrapper img {
+  float: left;
+  width: 55px;
+  margin-left: 100px;
+}
+#copyright {
+  float: left;
+  width: 420px;
+  margin-top: 20px;
+}
+
+footer nav {
+  float: right;
+  margin-right: 100px;
+  margin-top: -28px;
+  color: #abb5c1;
+}
+
+footer nav a{
+  color: #abb5c1;
+}
+
+footer nav ul li {
+  display: inline;
+  padding-right: 5px;
+  border-right: 1px solid;
+  border-color: gray;
+  margin-right: 5px;
+}
+
+footer nav ul li:last-child {
+  border-right: none;
+}

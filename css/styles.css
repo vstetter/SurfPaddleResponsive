@@ -5,7 +5,7 @@ body {
 }
 
 #page {
-  width: 960px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -60,7 +60,7 @@ header nav ul li {
 
 }
 
-.headline h5 {
+.headline h6 {
   font-size: 6px;
   text-align: center;
   margin-top: 0px;
@@ -69,23 +69,23 @@ header nav ul li {
 
 /*   END HEADER   */
 
+
 #content {
-overflow: auto;
-margin: 0;
-padding: 0;
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
-
-
 article {
-  width: 585px;
+  width: 61.666666666666%;
   float: left;
-  margin: 0px 5px 0px 30px;
   color: #5d6a71;
   font-family:'PT Sans', sans-serif;
   font-size: 14px;
-/*   padding: 0px 5px 0px 30px; */
+  margin: 0% 5% 0% 0%;
+  padding: 0;
 }
+
 
 article h1 {
   font-family: 'Oswald', sans-serif;
@@ -101,13 +101,17 @@ article h1 {
   margin-top: 2px;
 }
 
-.NameDate .CircleImage {
+/* .NameDate .CircleImage {
   width: 4%;
-}
+} */
 
 img.CircleImage {
   border-radius: 100%;
-  width: 17%;
+  width: 5%;
+}
+
+article p {
+  margin-bottom: 2px;
 }
 
 article blockquote {
@@ -162,24 +166,32 @@ li#Share {
   vertical-align: middle;
 }
 
-/*   END MAIN SECTION, LEFT COLUMN  */
+/* END MAIN SECTION, LEFT COLUMN */
+
 
 
 .asideWrapper {
-  width: 285px;
+  width: 33.33333333333%;
   float: left;
-  margin: 50px 10px 0px 30px;
   color:#ABB5C1;
+  margin: 0;
+  padding: 0;
+
+
 }
 
+
 .userInfo {
-  width: 285px;
+  margin: 0 auto;
+  display: block;
 }
-.CircleImage2 {
+
+.userInfo .CircleImage2 {
   border-radius: 100%;
   width: 25%;
-  position: relative;
-  margin: 10px 20px 0px 100px;
+  align: center;
+position: relative;
+margin: 30px 20px 0px 100px; */
 }
 
 .AnneMarieName {
@@ -187,25 +199,26 @@ li#Share {
   text-align: center;
 }
 
-
-.userInfo ul li {
-  display: inline;
+.SocialMedia li {
+  display: inline-block;
   list-style-type: none;
   text-decoration: none;
   font-size: 10px;
   margin-top: 0px;
 }
 
+.sidebarad {
+  margin: 0 auto;
+}
 
 img.SUPImage {
-  display: block;
+/*   display: block; */
   text-align: center;
 
 }
 
 .AboutAd {
   text-align: right;
-  margin-right: 40px;
   font-size: 5px;
 }
 
@@ -216,26 +229,38 @@ img.SUPImage {
   font-family: 'Oswald', sans-serif;
   font-size: 16px;
 }
+
 .SidebarSection {
-  font-size: 6px;
+  margin: 0 auto;
+  font-size: 10px;
   font-family:'PT Sans', sans-serif;
 }
 
 
-
-/*    END MAIN SECTION, RIGHT COLUMN   */
+END MAIN SECTION, RIGHT COLUMN
 
 #Posthead {
-  width: 960px;
+
+  display: block;
+  margin: 0 auto;
+}
+
+#Posthead h2 {
   font-family: 'Oswald', sans-serif;
-  font-size: 40px;
+  font-size: 48px;
   background-color: white;
   text-align: center;
 }
 
+
+
 .PopularPosts {
-  position: relative;
-  display: block;
+/*   position: relative; */
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+/*   position: relative;
+display: block; */
 }
 
 .PopularPosts a {
@@ -317,15 +342,16 @@ font-size: 20px;
 }
 
 
-/*   END POPULAR POSTS SECTION   */
+END POPULAR POSTS SECTION
 
 .footer-wrapper {
-  width: 960px;
+  width: 100%;
   background-color: #213752;
   height: 55px;
   color: #ABB5C1;
-  display: inline-block;
+/*   display: inline-block; */
   font-size: 9px;
+/*   overflow: hidden; */
 }
 
 .footer-wrapper img {
@@ -333,6 +359,7 @@ font-size: 20px;
   width: 55px;
   margin-left: 100px;
 }
+
 #copyright {
   float: left;
   width: 420px;

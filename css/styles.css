@@ -1,8 +1,10 @@
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
 }
+
 
 #page {
   width: 100%;
@@ -34,7 +36,7 @@ header {
 
 
 header nav {
-  padding:0;
+  padding: 0;
   display: inline-block;
   vertical-align: middle;
   text-align: left;
@@ -55,15 +57,12 @@ header nav {
 }
 
 .rightnav li {
-display: inline-block;
+  display: inline-block;
 }
 
 .rightnav li:first-child {
   padding-right: 2em;
 }
-
-
-
 
 
 .headline h1 {
@@ -128,7 +127,6 @@ article h1 {
 img.CircleImage {
   border-radius: 100%;
   width: 5%;
-  display: none;
 }
 
 article p {
@@ -204,8 +202,6 @@ li#Share {
   color:#ABB5C1;
   margin: 0;
   padding: 0;
-
-
 }
 
 
@@ -218,8 +214,8 @@ li#Share {
   border-radius: 100%;
   width: 25%;
   align: center;
-position: relative;
-margin: 30px 1.25em 0px 6.25em;
+  position: relative;
+  margin: 30px 1.25em 0px 6.25em;
 }
 
 .AnneMarieName {
@@ -240,7 +236,7 @@ margin: 30px 1.25em 0px 6.25em;
 }
 
 img.SUPImage {
-/*   display: block; */
+  /*   display: block; */
   text-align: center;
 
 }
@@ -280,15 +276,13 @@ END MAIN SECTION, RIGHT COLUMN
   text-align: center;
 }
 
-
-
 .PopularPosts {
-/*   position: relative; */
+  /*   position: relative; */
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
-/*   position: relative;
-display: block; */
+  /*   position: relative;
+  display: block; */
 }
 
 .PopularPosts a {
@@ -296,11 +290,11 @@ display: block; */
 }
 
 .PopularPosts p {
-margin-top: 200px;
-margin-left: 0.625em;
-font-family: 'Oswald', sans-serif;
-font-size: 1.25em;
-color: black;
+  margin-top: 200px;
+  margin-left: 0.625em;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.25em;
+  color: black;
 
 }
 
@@ -320,127 +314,103 @@ color: black;
   background: linear-gradient(
     rgba(70,130,180,0.7),
     rgba(70,130,180,0.7)),
-  url("../images/KellySlater240240.jpg");
-  background-size: cover;
-  background-position: center;
-}
+    url("../images/KellySlater240240.jpg");
+    background-size: cover;
+    background-position: center;
+  }
 
 .CoolPost:hover {
-  background: none;
-  background-image: url("../images/KellySlater240240.jpg");
-}
+    background: none;
+    background-image: url("../images/KellySlater240240.jpg");
+  }
 
 .PostTitle {
 
-  background: linear-gradient(
-    rgba(70,130,180,0.7),
-    rgba(70,130,180,0.7)),
-    url("../images/Beer240240.jpg");
-    background-size: cover;
-    background-position: center;
-}
+      background: linear-gradient(
+      rgba(70,130,180,0.7),
+      rgba(70,130,180,0.7)),
+      url("../images/Beer240240.jpg");
+      background-size: cover;
+      background-position: center;
+    }
 
 .PostTitle:hover {
-  background: none;
-  background-image: url("../images/Beer240240.jpg");
-}
+      background: none;
+      background-image: url("../images/Beer240240.jpg");
+    }
 
 .LongerPost {
-  background: linear-gradient(
-    rgba(70,130,180,0.7),
-    rgba(70,130,180,0.7)),
-    url("../images/Zach240240.jpg");
-}
+      background: linear-gradient(
+        rgba(70,130,180,0.7),
+        rgba(70,130,180,0.7)),
+        url("../images/Zach240240.jpg");
+      }
 
 .LongerPost:hover {
-  background: none;
-  background-image: url("../images/Zach240240.jpg");
-}
+        background: none;
+        background-image: url("../images/Zach240240.jpg");
+      }
 
 .CoolaPost {
 
-  background: linear-gradient(
-  rgba(70,130,180,0.7),
-  rgba(70,130,180,0.7)),
-  url("../images/LiquorBottles240240.jpg");
-}
+        background: linear-gradient(
+          rgba(70,130,180,0.7),
+          rgba(70,130,180,0.7)),
+          url("../images/LiquorBottles240240.jpg");
+        }
 
 .CoolaPost:hover {
-  background: none;
-  background-image: url("../images/LiquorBottles240240.jpg");
+          background: none;
+          background-image: url("../images/LiquorBottles240240.jpg");
+        }
+
+
+/* END POPULAR POSTS SECTION */
+
+        .footer-wrapper {
+          width: 100%;
+          background-color: #213752;
+          height: 55px;
+          color: #ABB5C1;
+          /*   display: inline-block; */
+          font-size: 0.563em;
+          overflow: hidden;
+        }
+
+        .footer-wrapper img {
+          float: left;
+          width: 3.438em;
+          margin-left: 10%;
+        }
+
+        #copyright {
+          float: left;
+          /*   width: 26.25em;
+          margin-top: 1.25em;
+          } */
+
+          footer nav {
+            float: right;
+            /*   margin-right: 6.25em;
+            margin-top: -1.75em; */
+            color: #abb5c1;
+          }
+
+          footer nav a{
+            color: #abb5c1;
+          }
+
+          footer nav ul li {
+            display: inline;
+            padding-right: 0.31em;
+            border-right: 0.063em solid;
+            border-color: gray;
+            margin-right: 0.313em;
+          }
+
+          footer nav ul li:last-child {
+            border-right: none;
+          }
+
 }
-
-
-END POPULAR POSTS SECTION
-
-.footer-wrapper {
-  width: 100%;
-  background-color: #213752;
-  height: 55px;
-  color: #ABB5C1;
-/*   display: inline-block; */
-  font-size: 0.563em;
-  overflow: hidden;
-}
-
-.footer-wrapper img {
-  float: left;
-  width: 3.438em;
-  margin-left: 10%;
-}
-
-#copyright {
-  float: left;
-/*   width: 26.25em;
-margin-top: 1.25em;
-} */
-
-footer nav {
-  float: right;
-/*   margin-right: 6.25em;
-margin-top: -1.75em; */
-  color: #abb5c1;
-}
-
-footer nav a{
-  color: #abb5c1;
-}
-
-footer nav ul li {
-  display: inline;
-  padding-right: 0.31em;
-  border-right: 0.063em solid;
-  border-color: gray;
-  margin-right: 0.313em;
-}
-
-footer nav ul li:last-child {
-  border-right: none;
-}
-
-
 /* *********  MEDIA QUERIES  ************/
-
-
-
-
-
-@/* media screen and (max-width: 320px) {
-
-  header nav .leftnav {
-    display: none;
-    }
-
-  .NameDate .CircleImage: {
-    display: none;
-  }
-
-  .buttons > span {
-    display: none;
-  }
-
-  .PopularPosts .CoolaPost {
-    display: none;
-  }
-
-} */

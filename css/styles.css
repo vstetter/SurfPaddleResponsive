@@ -17,9 +17,13 @@ ul {
   list-style-type: none;
 }
 
+img {
+  max-width: 100;
+}
+
 header {
-  height: 350px;
-  padding: 0px 20px;
+  min-height: 350px;
+  padding: 0px 1.25em;
   background: linear-gradient(rgba(70,130,180,0.7),
   rgba(70,130,180,0.7)), url("../images/beachwavesHeader.jpg");
   background-size: cover;
@@ -30,58 +34,77 @@ header {
 
 
 header nav {
-  padding:20px;
+  padding:0;
+  display: inline-block;
   vertical-align: middle;
   text-align: left;
 }
 
 .leftnav {
-  display: inline;
-  color: black;
+  float: left;
 }
 
-header nav ul {
-float: right;
-  margin: 0;
+.leftnav img {
+  display: inline;
+}
+
+.rightnav {
+  float: left;
+  margin-left: 15em;
   padding: 0;
 }
 
-header nav ul li {
-  display: inline-block;
-  margin-right: 10px;
+.rightnav li {
+display: inline-block;
 }
 
+.rightnav li:first-child {
+  padding-right: 2em;
+}
+
+
+
+
+
 .headline h1 {
-  font-size: 60px;
+  font-size: 3.5em;
   text-align: center;
   color: white;
-  padding-top: 40px;
-  margin-bottom: 0px;
+  padding-top: 30px;
+  margin-bottom: 0;
 
 }
 
 .headline h6 {
-  font-size: 6px;
+  font-size: 0.375em;
   text-align: center;
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 
 /*   END HEADER   */
 
 
-#content {
+.contentCLEARFIX {
   width: 90%;
   margin: 0 auto;
-  overflow: hidden;
+}
+
+.contentCLEARFIX:before, .contentCLEARFIX:after {
+  content: "";
+  display: table;
+}
+
+.contentCLEARFIX:after {
+  clear: both;
 }
 
 article {
-  width: 61.666666666666%;
+  width: 61.66666666%;
   float: left;
   color: #5d6a71;
   font-family:'PT Sans', sans-serif;
-  font-size: 14px;
+  font-size: 0.875em;
   margin: 0% 5% 0% 0%;
   padding: 0;
 }
@@ -89,25 +112,23 @@ article {
 
 article h1 {
   font-family: 'Oswald', sans-serif;
-  font-size: 48px;
+  font-size: 3em;
   margin-bottom: 1px;
   color: black;
 }
 
 
 .NameDate {
-  font-size: 10px;
+  font-size: 0.625em;
   color: #ABB5C1;
   margin-top: 2px;
 }
 
-/* .NameDate .CircleImage {
-  width: 4%;
-} */
 
 img.CircleImage {
   border-radius: 100%;
   width: 5%;
+  display: none;
 }
 
 article p {
@@ -117,8 +138,11 @@ article p {
 article blockquote {
   font-family: 'Open Sans', sans-serif;
   color: #406DAF;
-  font-size: 22px;
+  font-size: 1.375em;
 }
+
+
+/* BUTTONS */
 
 .buttons {
   margin-left: 0;
@@ -126,37 +150,31 @@ article blockquote {
   font-family:'PT Sans', sans-serif;
 }
 
-.buttons li {
+.buttons > i {
   display: inline;
-  margin-right: 5px;
-  width: 80px;
-  height: 50px;
+  position: relative;
+
 }
 
 li#Comments, li#ReadLater {
   background-color: #a6b1bd;
+  display: inline-block;
 }
 
 li#Share {
   background-color: #406caf;
+  display: inline-block;
 }
-
 
 .buttons a {
   color: white;
-  font-size: 12px;
+  font-size: 0.75em;
 }
 
-#Comments, #ReadLater, #Share {
-  padding: 5px 5px 5px 0px;
-  display: inline;
-  position: relative;
-}
 
 #Comments img, #Comments span {
   vertical-align: middle;
 }
-
 
 #ReadLater img, #ReadLater span {
   vertical-align: middle;
@@ -165,6 +183,16 @@ li#Share {
 #Share img, #Share span {
   vertical-align: middle;
 }
+
+
+/* imported icons from fort awesome */
+
+.fa.fa-comment,.fa.fa-cloud-upload,.fa.fa-share-square{
+  color:white;
+  padding-left:0.5em;
+  padding-right:0.5em;
+}
+
 
 /* END MAIN SECTION, LEFT COLUMN */
 
@@ -191,7 +219,7 @@ li#Share {
   width: 25%;
   align: center;
 position: relative;
-margin: 30px 20px 0px 100px; */
+margin: 30px 1.25em 0px 6.25em;
 }
 
 .AnneMarieName {
@@ -203,7 +231,7 @@ margin: 30px 20px 0px 100px; */
   display: inline-block;
   list-style-type: none;
   text-decoration: none;
-  font-size: 10px;
+  font-size: 0.625em;
   margin-top: 0px;
 }
 
@@ -219,7 +247,7 @@ img.SUPImage {
 
 .AboutAd {
   text-align: right;
-  font-size: 5px;
+  font-size: 0.313em;
 }
 
 #heading {
@@ -227,12 +255,12 @@ img.SUPImage {
   margin-top: 0px;
   margin-bottom: 0;
   font-family: 'Oswald', sans-serif;
-  font-size: 16px;
+  font-size: 1em;
 }
 
 .SidebarSection {
   margin: 0 auto;
-  font-size: 10px;
+  font-size: 0.625em;
   font-family:'PT Sans', sans-serif;
 }
 
@@ -247,7 +275,7 @@ END MAIN SECTION, RIGHT COLUMN
 
 #Posthead h2 {
   font-family: 'Oswald', sans-serif;
-  font-size: 48px;
+  font-size: 3em;
   background-color: white;
   text-align: center;
 }
@@ -269,9 +297,10 @@ display: block; */
 
 .PopularPosts p {
 margin-top: 200px;
-margin-left: 10px;
+margin-left: 0.625em;
 font-family: 'Oswald', sans-serif;
-font-size: 20px;
+font-size: 1.25em;
+color: black;
 
 }
 
@@ -350,26 +379,26 @@ END POPULAR POSTS SECTION
   height: 55px;
   color: #ABB5C1;
 /*   display: inline-block; */
-  font-size: 9px;
-/*   overflow: hidden; */
+  font-size: 0.563em;
+  overflow: hidden;
 }
 
 .footer-wrapper img {
   float: left;
-  width: 55px;
-  margin-left: 100px;
+  width: 3.438em;
+  margin-left: 10%;
 }
 
 #copyright {
   float: left;
-  width: 420px;
-  margin-top: 20px;
-}
+/*   width: 26.25em;
+margin-top: 1.25em;
+} */
 
 footer nav {
   float: right;
-  margin-right: 100px;
-  margin-top: -28px;
+/*   margin-right: 6.25em;
+margin-top: -1.75em; */
   color: #abb5c1;
 }
 
@@ -379,12 +408,39 @@ footer nav a{
 
 footer nav ul li {
   display: inline;
-  padding-right: 5px;
-  border-right: 1px solid;
+  padding-right: 0.31em;
+  border-right: 0.063em solid;
   border-color: gray;
-  margin-right: 5px;
+  margin-right: 0.313em;
 }
 
 footer nav ul li:last-child {
   border-right: none;
 }
+
+
+/* *********  MEDIA QUERIES  ************/
+
+
+
+
+
+@/* media screen and (max-width: 320px) {
+
+  header nav .leftnav {
+    display: none;
+    }
+
+  .NameDate .CircleImage: {
+    display: none;
+  }
+
+  .buttons > span {
+    display: none;
+  }
+
+  .PopularPosts .CoolaPost {
+    display: none;
+  }
+
+} */

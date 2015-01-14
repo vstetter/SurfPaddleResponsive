@@ -32,52 +32,52 @@ header {
   vertical-align: middle;
   text-align: center;
   font-family: 'PT Sans', sans-serif;
+
+  nav {
+    padding: 0;
+    display: inline-block;
+    text-align: left;
+  }
 }
 
 
-header nav {
-  padding: 0;
-  display: inline-block;
-  vertical-align: middle;
-  text-align: left;
-}
 
 .leftnav {
   float: left;
+  img {
+    display: inline;
+  }
 }
 
-.leftnav img {
-  display: inline;
-}
+
 
 .rightnav {
   float: left;
   margin-left: 15em;
   padding: 0;
+  li {
+    display: inline-block;
+  }
+  li:first-child {
+    padding-right: 2em;
+  }
 }
 
-.rightnav li {
-  display: inline-block;
-}
-
-.rightnav li:first-child {
-  padding-right: 2em;
-}
 
 
-.headline h1 {
+.headline {
+  h1 {
   font-size: 3.5em;
   text-align: center;
   color: white;
   padding-top: 30px;
   margin-bottom: 0;
-
-}
-
-.headline h6 {
-  font-size: 0.375em;
-  text-align: center;
-  margin-top: 0;
+  }
+  h6 {
+    font-size: 0.375em;
+    text-align: center;
+    margin-top: 0;
+  }
 }
 
 
@@ -87,16 +87,16 @@ header nav {
 .contentCLEARFIX {
   width: 90%;
   margin: 0 auto;
+  &:before, $:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear:both;
+  }
+
 }
 
-.contentCLEARFIX:before, .contentCLEARFIX:after {
-  content: "";
-  display: table;
-}
-
-.contentCLEARFIX:after {
-  clear: both;
-}
 
 article {
   width: 61.66666666%;
@@ -106,14 +106,20 @@ article {
   font-size: 0.875em;
   margin: 0% 5% 0% 0%;
   padding: 0;
-}
-
-
-article h1 {
-  font-family: 'Oswald', sans-serif;
-  font-size: 3em;
-  margin-bottom: 1px;
-  color: black;
+  h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3em;
+    margin-bottom: 1px;
+    color: black;
+  }
+  p {
+    margin-bottom: 2px;
+  }
+  blockquote {
+    font-family: 'Open Sans', sans-serif;
+    color: #406DAF;
+    font-size: 1.375em;
+  }
 }
 
 
@@ -127,16 +133,6 @@ article h1 {
 img.CircleImage {
   border-radius: 100%;
   width: 5%;
-}
-
-article p {
-  margin-bottom: 2px;
-}
-
-article blockquote {
-  font-family: 'Open Sans', sans-serif;
-  color: #406DAF;
-  font-size: 1.375em;
 }
 
 
@@ -267,36 +263,33 @@ END MAIN SECTION, RIGHT COLUMN
 
   display: block;
   margin: 0 auto;
+  h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3em;
+    background-color: white;
+    text-align: center;
+  }
+
 }
 
-#Posthead h2 {
-  font-family: 'Oswald', sans-serif;
-  font-size: 3em;
-  background-color: white;
-  text-align: center;
-}
 
 .PopularPosts {
-  /*   position: relative; */
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
-  /*   position: relative;
-  display: block; */
-}
-
-.PopularPosts a {
-  display: inline;
-}
-
-.PopularPosts p {
-  margin-top: 200px;
-  margin-left: 0.625em;
-  font-family: 'Oswald', sans-serif;
-  font-size: 1.25em;
-  color: black;
+  a {
+    display: inline;
+  }
+  p {
+    margin-top: 200px;
+    margin-left: 0.625em;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.25em;
+    color: black;
+  }
 
 }
+
 
 .LongerPost p {
   margin-top: 170px;
@@ -317,26 +310,24 @@ END MAIN SECTION, RIGHT COLUMN
     url("../images/KellySlater240240.jpg");
     background-size: cover;
     background-position: center;
+    &:hover {
+      background: none;
+      background-image: url("../images/KellySlater240240.jpg");
+    }
   }
 
-.CoolPost:hover {
-    background: none;
-    background-image: url("../images/KellySlater240240.jpg");
-  }
 
 .PostTitle {
-
       background: linear-gradient(
       rgba(70,130,180,0.7),
       rgba(70,130,180,0.7)),
       url("../images/Beer240240.jpg");
       background-size: cover;
       background-position: center;
-    }
-
-.PostTitle:hover {
-      background: none;
-      background-image: url("../images/Beer240240.jpg");
+      &:hover {
+        background: none;
+        background-image: url("../images/Beer240240.jpg");
+      }
     }
 
 .LongerPost {
@@ -344,11 +335,10 @@ END MAIN SECTION, RIGHT COLUMN
         rgba(70,130,180,0.7),
         rgba(70,130,180,0.7)),
         url("../images/Zach240240.jpg");
-      }
-
-.LongerPost:hover {
-        background: none;
-        background-image: url("../images/Zach240240.jpg");
+        &:hover {
+          background: none;
+          background-image: url("../images/Zach240240.jpg");
+        }
       }
 
 .CoolaPost {
@@ -357,13 +347,11 @@ END MAIN SECTION, RIGHT COLUMN
           rgba(70,130,180,0.7),
           rgba(70,130,180,0.7)),
           url("../images/LiquorBottles240240.jpg");
+          &:hover {
+            background: none;
+            background-image: url("../images/LiquorBottles240240.jpg");
+          }
         }
-
-.CoolaPost:hover {
-          background: none;
-          background-image: url("../images/LiquorBottles240240.jpg");
-        }
-
 
 /* END POPULAR POSTS SECTION */
 
@@ -375,12 +363,11 @@ END MAIN SECTION, RIGHT COLUMN
           /*   display: inline-block; */
           font-size: 0.563em;
           overflow: hidden;
-        }
-
-        .footer-wrapper img {
-          float: left;
-          width: 3.438em;
-          margin-left: 10%;
+          img {
+            float: left;
+            width: 3.438em;
+            margin-left: 10%;
+          }
         }
 
         #copyright {
@@ -406,11 +393,10 @@ END MAIN SECTION, RIGHT COLUMN
             border-right: 0.063em solid;
             border-color: gray;
             margin-right: 0.313em;
+            &:last-child {
+              border-right: none;
+            }
           }
 
-          footer nav ul li:last-child {
-            border-right: none;
-          }
 
-}
 /* *********  MEDIA QUERIES  ************/

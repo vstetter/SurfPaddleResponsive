@@ -1,38 +1,83 @@
+$textColorarticle: #5d6a71;
+$secondaryColorLight:#ABB5C1;
+$secondaryColorMid: #406DAF;
+
+
+@mixin linGradbackground ($imagePath: url("../images/beachwavesHeader.jpg") ) {
+  background: linear-gradient(rgba(70, 130, 180,0.7),
+  rgba(70, 130, 180,0.7)), $imagePath;
+  background-size: cover;
+  background-position: center;
+  vertical-align: middle;
+  text-align: center;
+}
+
 
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
 }
 
-
-#page {
-  width: 100%;
-  margin: 0 auto;
-}
 
 a {
   text-decoration: none;
 }
 
+
+h1, h2, h4, h5, h6 {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+h1 {
+  font-size: 3.5em;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+h5 {
+  font-size: 0.625em;
+}
+
+h6 {
+  font-size: 0.375em;
+}
+
+
+
 ul {
+  margin: 0;
+  padding: 1em 0 0 0;
   list-style-type: none;
+  li {
+    display: inline-block;
+  }
+  a {
+    display: block;
+    padding: 0.5em;
+    text-decoration: none;
+  }
 }
 
 img {
-  max-width: 100;
+  max-width: 100%;
 }
+
+
 
 header {
   min-height: 350px;
   padding: 0px 1.25em;
-  background: linear-gradient(rgba(70,130,180,0.7),
-  rgba(70,130,180,0.7)), url("../images/beachwavesHeader.jpg");
-  background-size: cover;
-  vertical-align: middle;
-  text-align: center;
   font-family: 'PT Sans', sans-serif;
-
+  @include linGradbackground ();
   nav {
     padding: 0;
     display: inline-block;
@@ -55,28 +100,17 @@ header {
   float: left;
   margin-left: 15em;
   padding: 0;
-  li {
-    display: inline-block;
-  }
-  li:first-child {
-    padding-right: 2em;
-  }
+/*   li:first-child {
+  padding-right: 2em;
+} */
 }
 
 
 
 .headline {
   h1 {
-  font-size: 3.5em;
-  text-align: center;
   color: white;
   padding-top: 30px;
-  margin-bottom: 0;
-  }
-  h6 {
-    font-size: 0.375em;
-    text-align: center;
-    margin-top: 0;
   }
 }
 
@@ -87,37 +121,38 @@ header {
 .contentCLEARFIX {
   width: 90%;
   margin: 0 auto;
-  &:before, $:after {
-    content: "";
-    display: table;
-  }
-  &:after {
-    clear:both;
-  }
+}
 
+.contentCLEARFIX:before, .contentCLEARFIX:after {
+  content: "";
+  display: table;
+}
+
+.contentCLEARFIX:after {
+  clear: both;
 }
 
 
 article {
   width: 61.66666666%;
   float: left;
-  color: #5d6a71;
+  color: $textColorarticle;
   font-family:'PT Sans', sans-serif;
   font-size: 0.875em;
   margin: 0% 5% 0% 0%;
-  padding: 0;
-  h1 {
+  padding: 2em 0;
+  h2 {
     font-family: 'Oswald', sans-serif;
-    font-size: 3em;
     margin-bottom: 1px;
     color: black;
+    text-align: left;
   }
   p {
     margin-bottom: 2px;
   }
   blockquote {
     font-family: 'Open Sans', sans-serif;
-    color: #406DAF;
+    color: $secondaryColorMid;
     font-size: 1.375em;
   }
 }
@@ -125,7 +160,7 @@ article {
 
 .NameDate {
   font-size: 0.625em;
-  color: #ABB5C1;
+  color: $secondaryColorLight;
   margin-top: 2px;
 }
 
@@ -139,32 +174,22 @@ img.CircleImage {
 /* BUTTONS */
 
 .buttons {
-  margin-left: 0;
-  padding-left: 0;
   font-family:'PT Sans', sans-serif;
+  li#Comments, li#ReadLater {
+    background-color: $secondaryColorLight;
+  }
+  li#Share {
+    background-color: $secondaryColorMid;
+  }
+  a {
+    color: white;
+    font-size: 0.75em;
+  }
+  i {
+    display: inline;
+    position: relative;
+  }
 }
-
-.buttons > i {
-  display: inline;
-  position: relative;
-
-}
-
-li#Comments, li#ReadLater {
-  background-color: #a6b1bd;
-  display: inline-block;
-}
-
-li#Share {
-  background-color: #406caf;
-  display: inline-block;
-}
-
-.buttons a {
-  color: white;
-  font-size: 0.75em;
-}
-
 
 #Comments img, #Comments span {
   vertical-align: middle;
@@ -195,7 +220,7 @@ li#Share {
 .asideWrapper {
   width: 33.33333333333%;
   float: left;
-  color:#ABB5C1;
+  color:$secondaryColorLight;
   margin: 0;
   padding: 0;
 }
@@ -204,28 +229,31 @@ li#Share {
 .userInfo {
   margin: 0 auto;
   display: block;
+  .CircleImage2 {
+    border-radius: 100%;
+    width: 25%;
+    align: center;
+    position: relative;
+    margin: 30px 1.25em 0px 6.25em;
+  }
 }
 
-.userInfo .CircleImage2 {
-  border-radius: 100%;
-  width: 25%;
-  align: center;
-  position: relative;
-  margin: 30px 1.25em 0px 6.25em;
-}
 
 .AnneMarieName {
   margin: 0 auto;
   text-align: center;
+  font-family: 'Oswald', sans-serif;
 }
 
 .SocialMedia li {
   display: inline-block;
   list-style-type: none;
   text-decoration: none;
+  margin: 0 auto;
   font-size: 0.625em;
-  margin-top: 0px;
+  font-family:'PT Sans', sans-serif;
 }
+
 
 .sidebarad {
   margin: 0 auto;
@@ -243,11 +271,10 @@ img.SUPImage {
 }
 
 #heading {
-  color:#406DAF;
+  color:$secondaryColorMid;
   margin-top: 0px;
   margin-bottom: 0;
   font-family: 'Oswald', sans-serif;
-  font-size: 1em;
 }
 
 .SidebarSection {
@@ -259,18 +286,10 @@ img.SUPImage {
 
 END MAIN SECTION, RIGHT COLUMN
 
-#Posthead {
-
-  display: block;
-  margin: 0 auto;
-  h2 {
+#Posthead h2 {
     font-family: 'Oswald', sans-serif;
-    font-size: 3em;
-    background-color: white;
-    text-align: center;
   }
 
-}
 
 
 .PopularPosts {
@@ -304,13 +323,9 @@ END MAIN SECTION, RIGHT COLUMN
 
 
 .CoolPost {
-  background: linear-gradient(
-    rgba(70,130,180,0.7),
-    rgba(70,130,180,0.7)),
-    url("../images/KellySlater240240.jpg");
-    background-size: cover;
-    background-position: center;
-    &:hover {
+  @include linGradbackground (url("../images/KellySlater240240.jpg"));
+
+  &:hover {
       background: none;
       background-image: url("../images/KellySlater240240.jpg");
     }
@@ -318,36 +333,26 @@ END MAIN SECTION, RIGHT COLUMN
 
 
 .PostTitle {
-      background: linear-gradient(
-      rgba(70,130,180,0.7),
-      rgba(70,130,180,0.7)),
-      url("../images/Beer240240.jpg");
-      background-size: cover;
-      background-position: center;
-      &:hover {
+  @include linGradbackground (url("../images/Beer240240.jpg"));
+
+  &:hover {
         background: none;
         background-image: url("../images/Beer240240.jpg");
       }
     }
 
 .LongerPost {
-      background: linear-gradient(
-        rgba(70,130,180,0.7),
-        rgba(70,130,180,0.7)),
-        url("../images/Zach240240.jpg");
-        &:hover {
+  @include linGradbackground (url("../images/Zach240240.jpg"));
+  &:hover {
           background: none;
           background-image: url("../images/Zach240240.jpg");
         }
       }
 
 .CoolaPost {
+  @include linGradbackground (url("../images/LiquorBottles240240.jpg"));
 
-        background: linear-gradient(
-          rgba(70,130,180,0.7),
-          rgba(70,130,180,0.7)),
-          url("../images/LiquorBottles240240.jpg");
-          &:hover {
+  &:hover {
             background: none;
             background-image: url("../images/LiquorBottles240240.jpg");
           }
@@ -359,7 +364,7 @@ END MAIN SECTION, RIGHT COLUMN
           width: 100%;
           background-color: #213752;
           height: 55px;
-          color: #ABB5C1;
+          color: $secondaryColorLight;
           /*   display: inline-block; */
           font-size: 0.563em;
           overflow: hidden;
@@ -368,35 +373,26 @@ END MAIN SECTION, RIGHT COLUMN
             width: 3.438em;
             margin-left: 10%;
           }
+          #copyright {
+            float: left;
+            font-family:'PT Sans', sans-serif;
+          }
+          nav ul {
+            float: right;
+          }
         }
-
-        #copyright {
-          float: left;
-          /*   width: 26.25em;
-          margin-top: 1.25em;
-          } */
 
           footer nav {
             float: right;
-            /*   margin-right: 6.25em;
-            margin-top: -1.75em; */
-            color: #abb5c1;
-          }
-
-          footer nav a{
-            color: #abb5c1;
-          }
-
-          footer nav ul li {
-            display: inline;
-            padding-right: 0.31em;
-            border-right: 0.063em solid;
-            border-color: gray;
-            margin-right: 0.313em;
-            &:last-child {
-              border-right: none;
+            color: $secondaryColorLight;
+            li {
+              padding-right: 0.31em;
+              border-right: 0.063em solid;
+              border-color: gray;
+              margin-right: 0.313em;
+              a {
+                font-family:'PT Sans', sans-serif;
+                color: $secondaryColorLight;
+              }
             }
           }
-
-
-/* *********  MEDIA QUERIES  ************/
